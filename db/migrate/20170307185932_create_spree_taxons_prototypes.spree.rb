@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20141012083513)
+# This migration comes from spree_old (originally 20141012083513)
 class CreateSpreeTaxonsPrototypes < ActiveRecord::Migration[4.2]
   def change
     create_table :spree_taxons_prototypes do |t|

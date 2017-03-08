@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130228210442)
+# This migration comes from spree_old (originally 20130228210442)
 class CreateShippingMethodZone < ActiveRecord::Migration[4.2]
   class ShippingMethodZone < Spree::Base
     self.table_name = 'shipping_methods_zones'

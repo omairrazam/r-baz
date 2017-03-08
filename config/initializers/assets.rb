@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-# Version of your assets, change this if you want to expire all your assets.
+# Version of your assets_old, change this if you want to expire all your assets_old.
 Rails.application.config.assets.version = '1.0'
 
 # Add additional assets to the asset load path

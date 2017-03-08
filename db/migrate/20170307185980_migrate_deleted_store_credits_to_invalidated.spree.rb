@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150514201836)
+# This migration comes from spree_old (originally 20150514201836)
 class MigrateDeletedStoreCreditsToInvalidated < ActiveRecord::Migration[4.2]
   def up
     Spree::StoreCredit.only_deleted.find_each do |store_credit|

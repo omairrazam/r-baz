@@ -1,0 +1,22 @@
+<%# no need for thumbnails unless there is more than one image %>
+<% #if (@product.images + @product.variant_images).uniq.size > 1 %>
+  <ul id="product-thumbnails" class="" data-hook>
+    
+    <% @product.images.each do |i| %>
+      <li >
+        <%= link_to(image_tag(i.attachment.url(:thumbnail), class: "etalage_thumb_image img-responsive"), i.attachment.url(:product)) %>
+          <%= link_to(image_tag(i.attachment.url(:zoom), class: "etalage_source_image img-responsive"), i.attachment.url(:product)) %>
+      </li>
+    <% end %>
+
+    <% if @product.has_variants? %>
+      <% @product.variant_images.each do |i| %>
+        <% next if @product.images.include?(i) %>
+        <li >
+          <%= link_to(image_tag(i.attachment.url(:thumbnail), class: "etalage_thumb_image img-responsive"), i.attachment.url(:product)) %>
+          <%= link_to(image_tag(i.attachment.url(:zoom), class: "etalage_source_image img-responsive"), i.attachment.url(:product)) %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+<%# end %>

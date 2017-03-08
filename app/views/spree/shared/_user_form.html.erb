@@ -1,0 +1,20 @@
+
+<fieldset id="password-credentials">
+    <div>
+    <span>Email</span>
+    <%= f.text_field :email %>
+    </div>
+    
+    <div>
+    <span>Password</span>
+    <%= f.password_field :password %>
+    </div>
+    
+    <div>
+    <span>Confirm Password</span>
+    <%= f.password_field :password_confirmation %>
+    </div>
+ 
+</fieldset>
+<div data-hook="signup_below_password_fields"></div>
+

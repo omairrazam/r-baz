@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150407173305)
+# This migration comes from spree_old (originally 20150407173305)
 class AddFieldsToStockTransfer < ActiveRecord::Migration[4.2]
   def change
     add_column :spree_stock_transfers, :shipped_at, :datetime

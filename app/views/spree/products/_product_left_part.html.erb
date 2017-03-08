@@ -1,0 +1,23 @@
+<div data-hook="product_left_part_wrap">
+    <div id="product-images" data-hook="product_images">
+      <div id="main-image" class="" data-hook>
+        <!-- <div class="panel-body text-center">
+          <%#= product_image(product, itemprop: "image") %>
+        </div> -->
+      </div>
+      <div id="thumbnails" data-hook>
+        <%= render partial: 'thumbnails', :locals => {:product => product} %>
+      </div>
+    </div>
+
+    <div data-hook="product_properties">
+      <%#= render partial: 'properties' %>
+    </div>
+
+    <div data-hook="promotions">
+      <%#= render partial: 'promotions' %>
+    </div>
+</div>
+
+
+

@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130802022321)
+# This migration comes from spree_old (originally 20130802022321)
 class MigrateTaxCategoriesToLineItems < ActiveRecord::Migration[4.2]
   def change
     Spree::LineItem.find_each do |line_item|

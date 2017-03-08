@@ -1,0 +1,42 @@
+<!-- product price and add to cart button -->
+<!-- #################################### -->  
+<% if @product.price_in(current_currency) && !@product.price.nil? %>
+  <div data-hook="product_price" class="">
+    <!-- display only price -->
+    <div id="product-price">
+      <h6 class="product-section-title"><%#= Spree.t(:price) %></h6>
+      <div>
+        <label class="add-to price" itemprop="price">
+          <%= display_price(@product) %>
+        </label>
+        <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
+      </div>
+
+      <% if @product.master.can_supply? %>
+        <link itemprop="availability" href="https://schema.org/InStock" />
+      <% elsif @product.variants.empty? %>
+        <br />
+        <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
+      <% end %>
+    </div>
+    <!-- display only price ends -->
+
+    <!-- display cart button -->
+    <% if @product.master.can_supply? %>
+      <%= render :partial => "add_to_cart" %>
+    <% end %>
+    <!-- display cart button ends -->
+
+  </div>
+<% else %>
+  <div id="product-price">
+    <br />
+    <div>
+      <span class="price selling" itemprop="price">
+        <%= Spree.t('product_not_available_in_this_currency') %>
+      </span>
+    </div>
+  </div>
+<% end %>
+<!-- product price and add to cart button  end-->
+<!-- #################################### -->  

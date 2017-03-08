@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130830001159)
+# This migration comes from spree_old (originally 20130830001159)
 class MigrateOldShippingCalculators < ActiveRecord::Migration[4.2]
   def up
     Spree::ShippingMethod.all.each do |shipping_method|

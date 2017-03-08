@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150506181715)
+# This migration comes from spree_old (originally 20150506181715)
 class CreateStoreCreditTypes < ActiveRecord::Migration[4.2]
   def change
     create_table :spree_store_credit_types do |t|

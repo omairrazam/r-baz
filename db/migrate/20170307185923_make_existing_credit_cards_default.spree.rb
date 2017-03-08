@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20140805171219)
+# This migration comes from spree_old (originally 20140805171219)
 class MakeExistingCreditCardsDefault < ActiveRecord::Migration[4.2]
   def up
     # set the newest credit card for every user to be the default; SQL technique from

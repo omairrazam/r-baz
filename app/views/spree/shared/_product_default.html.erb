@@ -1,0 +1,29 @@
+<% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
+
+<div id="product_<%= product.id %>" class="col-md-4 grid-product-in product-top" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
+  <div class=" product-grid">
+
+    <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
+
+
+        <%= link_to image_tag(product.display_image.attachment(:home_product), itemprop: "image"), url, itemprop: 'url' %>
+
+        <div class="shoe-in">
+          <h6>
+            <%= link_to url, itemprop: "url" do %>
+                <%= content_tag(:span, truncate(product.name, length: 50), itemprop: "name", title: product.name) %>
+            <% end %>
+          </h6>
+          <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <label itemprop="price"><%= display_price(product) %></label>
+          </span>
+
+          <%= link_to "Add to Cart", url, :class => "store" %>
+
+        </div>
+        <b class="plus-on">+</b>
+    <% end %>
+  </div>
+</div>
+
+     

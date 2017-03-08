@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20131211192741)
+# This migration comes from spree_old (originally 20131211192741)
 class UniqueShippingMethodCategories < ActiveRecord::Migration[4.2]
   def change
     klass   = Spree::ShippingMethodCategory

@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20141217215630)
+# This migration comes from spree_old (originally 20141217215630)
 class UpdateProductSlugIndex < ActiveRecord::Migration[4.2]
   include Spree::MigrationHelpers
 

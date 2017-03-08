@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20140410150358)
+# This migration comes from spree_old (originally 20140410150358)
 class CorrectSomePolymorphicIndexAndAddMoreMissing < ActiveRecord::Migration[4.2]
   include Spree::MigrationHelpers
 

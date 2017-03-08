@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130807024301)
+# This migration comes from spree_old (originally 20130807024301)
 class UpgradeAdjustments < ActiveRecord::Migration[4.2]
   def up
     # Temporarily make originator association available

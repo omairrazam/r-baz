@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bazar.iml" filepath="$PROJECT_DIR$/.idea/bazar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../solidus/.idea/solidus.iml" filepath="$PROJECT_DIR$/../solidus/.idea/solidus.iml" />
     </modules>
   </component>
 </project>

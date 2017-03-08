@@ -290,7 +290,7 @@ ActiveRecord::Schema.define(version: 20170307186057) do
     t.decimal  "shipment_total",                    precision: 10, scale: 2, default: "0.0",   null: false
     t.decimal  "additional_tax_total",              precision: 10, scale: 2, default: "0.0"
     t.decimal  "promo_total",                       precision: 10, scale: 2, default: "0.0"
-    t.string   "channel",                                                    default: "spree"
+    t.string   "channel",                                                    default: "spree_old"
     t.decimal  "included_tax_total",                precision: 10, scale: 2, default: "0.0",   null: false
     t.integer  "item_count",                                                 default: 0
     t.integer  "approver_id"

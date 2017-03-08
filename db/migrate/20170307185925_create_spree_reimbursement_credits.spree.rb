@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20140808184039)
+# This migration comes from spree_old (originally 20140808184039)
 class CreateSpreeReimbursementCredits < ActiveRecord::Migration[4.2]
   def change
     create_table :spree_reimbursement_credits do |t|

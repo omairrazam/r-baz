@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20140804185157)
+# This migration comes from spree_old (originally 20140804185157)
 class AddDefaultToShipmentCost < ActiveRecord::Migration[4.2]
   def up
     change_column :spree_shipments, :cost, :decimal, precision: 10, scale: 2, default: 0.0

@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150528125647)
+# This migration comes from spree_old (originally 20150528125647)
 class DeleteInventoryUnitsWithoutShipment < ActiveRecord::Migration[4.2]
   # Prevent everything from running in one giant transaction in postrgres.
   disable_ddl_transaction!
