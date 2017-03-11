@@ -4,11 +4,11 @@
         <div class="col-md-3 footer-left">
             <h4>Asha Selections</h4>
             <div class="run-top">
-                <% @taxonomies.each do |taxonomy| %>
-                    <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
-                        <%= taxons_tree_footer(taxonomy.root, @taxon, max_level) %>
-                    <% end %>
-                <% end %>
+                <% #@taxonomies.each do |taxonomy| %>
+                    <% #cache [I18n.locale, taxonomy, max_level, @taxon] do %>
+                        <%#= taxons_tree_footer(taxonomy.root, @taxon, max_level) %>
+                    <% #end %>
+                <% #end %>
                 <div class="clearfix"> </div>
             </div>
         </div>

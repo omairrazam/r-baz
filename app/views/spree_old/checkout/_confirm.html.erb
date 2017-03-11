@@ -10,7 +10,7 @@
   <% Spree::Frontend::Config[:require_terms_and_conditions_acceptance].tap do |requires_acceptance| %>
     <% if requires_acceptance %>
       <div class="terms_and_conditions" data-hook="terms_and_conditions">
-        <div class="policy"><%= render partial: "spree_old/checkout/terms_and_conditions" %></div>
+        <div class="policy"><%= render partial: "spree_old/checkout_new/terms_and_conditions" %></div>
         <%= check_box_tag :accept_terms_and_conditions, 'accepted', false %>
         <%= label_tag :accept_terms_and_conditions, Spree.t(:agree_to_terms_of_service) %>
       </div>
