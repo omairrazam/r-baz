@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20140410141842)
+# This migration comes from spree_old (originally 20140410141842)
 class AddManyMissingIndexes < ActiveRecord::Migration[4.2]
   include Spree::MigrationHelpers
 

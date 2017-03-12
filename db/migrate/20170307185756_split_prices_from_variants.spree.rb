@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20121031162139)
+# This migration comes from spree_old (originally 20121031162139)
 class SplitPricesFromVariants < ActiveRecord::Migration[4.2]
   def up
     create_table :spree_prices do |t|

@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130213191427)
+# This migration comes from spree_old (originally 20130213191427)
 class CreateDefaultStock < ActiveRecord::Migration[4.2]
   class Variant < ActiveRecord::Base
     self.table_name = 'spree_variants'

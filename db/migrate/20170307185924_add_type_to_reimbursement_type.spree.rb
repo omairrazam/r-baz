@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20140806144901)
+# This migration comes from spree_old (originally 20140806144901)
 class AddTypeToReimbursementType < ActiveRecord::Migration[4.2]
   def change
     add_column :spree_reimbursement_types, :type, :string

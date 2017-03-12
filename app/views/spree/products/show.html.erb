@@ -1,0 +1,56 @@
+<% @body_id = 'product-details' %>
+
+<link rel="stylesheet" href="/assets/spree/frontend/etalage.css">
+<script src="/assets/spree/frontend/jquery.etalage.min.js"></script>
+<script>
+  jQuery(document).ready(function($) {
+
+      $('#product-thumbnails').etalage({
+          thumb_image_width: 300,
+          thumb_image_height: 400,
+          source_image_width: 900,
+          source_image_height: 1200,
+          show_hint: true,
+          click_callback: function(image_anchor, instance_id) {
+              alert('Callback example:\nYou clicked on an image with the anchor: "' + image_anchor + '"\n(in Etalage instance: "' + instance_id + '")');
+          }
+      });
+
+  });
+</script>
+
+<% cache [I18n.locale, current_pricing_options, @product] do %>
+<div class="container">
+  <div class="single" data-hook="product_show" itemscope itemtype="https://schema.org/Product">
+    <div class="col-md-9 top-in-single">
+        <!-- thumbnails + image -->
+        <div class="col-md-5 single-top" data-hook="product_left_part">
+            <%= render partial: 'product_left_part', locals: {:product => @product} %>
+        </div>
+        <!-- thumbnails + image end -->
+
+        <!-- product details -->
+        <div class="col-md-7 single-top-in" data-hook="product_right_part">
+         <%= render partial: 'product_right_part', locals: {:product => @product} %> 
+        </div>
+        <!-- product details end -->
+
+        <div class="clearfix"> </div>
+
+        <!-- featured products -->
+        <div class="product-top">
+          <%#= render partial: 'featured' %> 
+          <div class="clearfix"> </div>
+        </div>
+        <!-- featured products end -->
+    </div>
+    <!-- sidebar -->
+    <div class="col-md-3">
+      <%= render partial: 'sidebar' %> 
+    </div>
+    <!-- sidebar ends -->
+    <div class="clearfix"> </div>
+  </div><!-- single ends -->
+</div>
+<!-- container ends -->
+<% end %>

@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150825204216)
+# This migration comes from spree_old (originally 20150825204216)
 class DropSpreeGateways < ActiveRecord::Migration[4.2]
   def up
     drop_table :spree_gateways

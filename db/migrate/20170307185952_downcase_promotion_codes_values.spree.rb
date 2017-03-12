@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150226195213)
+# This migration comes from spree_old (originally 20150226195213)
 class DowncasePromotionCodesValues < ActiveRecord::Migration[4.2]
   def up
     Spree::PromotionCode.update_all("value = lower(value)")

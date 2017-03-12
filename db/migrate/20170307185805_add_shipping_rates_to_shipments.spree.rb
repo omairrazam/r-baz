@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130417123427)
+# This migration comes from spree_old (originally 20130417123427)
 class AddShippingRatesToShipments < ActiveRecord::Migration[4.2]
   def up
     Spree::Shipment.find_each do |shipment|

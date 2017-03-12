@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20140717155155)
+# This migration comes from spree_old (originally 20140717155155)
 class CreateDefaultRefundReason < ActiveRecord::Migration[4.2]
   def up
     Spree::RefundReason.create!(name: Spree::RefundReason::RETURN_PROCESSING_REASON, mutable: false)

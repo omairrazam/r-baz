@@ -1,0 +1,22 @@
+ <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
+
+
+<div id="product_<%= product.id %>" class="col-md-4 content-grid" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
+  <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
+
+      <%= link_to image_tag(product.display_image.attachment(:home_product), itemprop: "image"), url, itemprop: 'url' %>
+    <!-- <a href="single.html" class="lot"><img class="img-responsive " src="images/sh.png" alt=""></a> -->
+    <div class="shoe">
+      <%= content_tag(:p, truncate(product.name, length: 50), class: 'info', itemprop: "name", title: product.name) %>
+        <!-- <p>Nike 3.0 V4 Men Grey Royal Blue with White</p> -->
+          <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <label  itemprop="price"><%= display_price(product) %></label>
+          </span>
+        <!-- <label>$67.99</label> -->
+        <%= link_to Spree.t(:find_a_store), spree.products_path %>
+       <!--  <a href="single.html">find a store</a> -->
+    </div>
+    <div class="clearfix"> </div>
+    <b class="plus-in">+</b>
+  <% end %>
+</div>

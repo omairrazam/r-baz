@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20141105213646)
+# This migration comes from spree_old (originally 20141105213646)
 class UpdateClassificationsPositions < ActiveRecord::Migration[4.2]
   def up
     Spree::Taxon.all.each do |taxon|

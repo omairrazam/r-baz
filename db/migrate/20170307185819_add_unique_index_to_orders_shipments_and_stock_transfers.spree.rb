@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130628022817)
+# This migration comes from spree_old (originally 20130628022817)
 class AddUniqueIndexToOrdersShipmentsAndStockTransfers < ActiveRecord::Migration[4.2]
   def add
     add_index "spree_orders", ["number"], name: "number_idx_unique", unique: true

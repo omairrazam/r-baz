@@ -1,0 +1,68 @@
+#spree-header{
+	background: #2f2f2f;
+	margin: 0px;
+	#header{
+		padding: 0px;
+		background: inherit;
+	}
+	#logo {
+		img{
+    		width: auto;
+    	}
+	}
+}
+
+.online{
+	width:15% !important;
+	a {
+		padding:0 !important;
+	}
+}
+
+.header-in{
+	width:85% !important;
+}
+
+.sb-search{
+	right:16% !important;
+}
+
+.nav > li > a:hover{
+	background-color: inherit !important;
+}
+
+.container-fluid{
+	margin:0;
+	padding:0;
+}
+
+.register-top input[type="submit"] {
+    width: 20% !important;
+}
+
+button.cart {
+    border:none;
+}
+
+.header-grid li#link-to-cart {
+ 	padding: 0px;
+	a{
+	    font-size: 1.2em;
+    }
+}
+
+a{
+	&.list-group-item {
+	    background-color: transparent;
+	    &.active{
+			    background-color: #d2232a;
+			    border:none;
+		    &:focus{
+		    	background-color: #d2232a;
+		    } 
+		    &:hover{
+		    	background-color: #d2232a;
+		    }
+	    }
+	}
+}

@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150506181611)
+# This migration comes from spree_old (originally 20150506181611)
 class CreateSpreeStoreCreditPaymentMethod < ActiveRecord::Migration[4.2]
   class PaymentMethod < Spree::Base
     self.table_name = 'spree_payment_methods'
@@ -6,7 +6,7 @@ class CreateSpreeStoreCreditPaymentMethod < ActiveRecord::Migration[4.2]
   end
   def up
     # If migrating from Spree 3.0, the environment column is already gone.
-    # We remove it in a later migration if upgrading from spree <= 2.4 to soldius
+    # We remove it in a later migration if upgrading from spree_old <= 2.4 to soldius
     if column_exists?(:spree_payment_methods, :environment)
       attributes = { type: "Spree::PaymentMethod::StoreCredit", environment: Rails.env }
     else

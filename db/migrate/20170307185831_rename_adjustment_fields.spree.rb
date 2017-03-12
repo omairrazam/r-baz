@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130807024302)
+# This migration comes from spree_old (originally 20130807024302)
 class RenameAdjustmentFields < ActiveRecord::Migration[4.2]
   def up
     remove_column :spree_adjustments, :originator_id

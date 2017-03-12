@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150225205344)
+# This migration comes from spree_old (originally 20150225205344)
 class MovePromotionCodeToPromotionCodeValue < ActiveRecord::Migration[4.2]
   def up
     # This is done via SQL for performance reasons. For larger stores it makes

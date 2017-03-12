@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20130417120035)
+# This migration comes from spree_old (originally 20130417120035)
 class UpdateAdjustmentStates < ActiveRecord::Migration[4.2]
   def up
     Spree::Order.complete.find_each do |order|

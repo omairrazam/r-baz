@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20160608162651)
+# This migration comes from spree_old (originally 20160608162651)
 class EnsureDefaultStore < ActiveRecord::Migration[4.2]
   class Store < ActiveRecord::Base
     self.table_name = 'spree_stores'

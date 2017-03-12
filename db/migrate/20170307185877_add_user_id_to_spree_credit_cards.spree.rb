@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20140307235515)
+# This migration comes from spree_old (originally 20140307235515)
 class AddUserIdToSpreeCreditCards < ActiveRecord::Migration[4.2]
   def change
     unless Spree::CreditCard.column_names.include? "user_id"

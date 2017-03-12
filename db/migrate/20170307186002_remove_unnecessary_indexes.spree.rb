@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20150723224133)
+# This migration comes from spree_old (originally 20150723224133)
 # All of these indexes were originally added in
 # 20140410150358_correct_some_polymorphic_index_and_add_more_missing.rb
 # However, most are necessary and were removed from that migration. This

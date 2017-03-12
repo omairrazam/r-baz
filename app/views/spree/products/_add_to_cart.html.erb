@@ -1,0 +1,9 @@
+<div class="add-to-cart">
+  <br />
+  <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1 %>
+    <br>
+  <%= button_tag class: 'cart', id: 'add-to-cart-button', type: :submit do %>
+  <%= Spree.t(:add_to_cart) %>
+  <% end %>
+</div>
+

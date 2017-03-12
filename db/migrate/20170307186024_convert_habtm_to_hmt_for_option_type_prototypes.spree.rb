@@ -1,4 +1,4 @@
-# This migration comes from spree (originally 20151124062500)
+# This migration comes from spree_old (originally 20151124062500)
 class ConvertHabtmToHmtForOptionTypePrototypes < ActiveRecord::Migration[4.2]
   def up
     add_column :spree_option_types_prototypes, :id, :primary_key

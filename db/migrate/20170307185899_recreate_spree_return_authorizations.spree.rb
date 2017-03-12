@@ -1,9 +1,9 @@
-# This migration comes from spree (originally 20140710041921)
+# This migration comes from spree_old (originally 20140710041921)
 class RecreateSpreeReturnAuthorizations < ActiveRecord::Migration[4.2]
   def up
     # If the app has any legacy return authorizations then rename the table & columns and leave them there
     # for the spree_legacy_return_authorizations extension to pick up with.
-    # Otherwise just drop the tables/columns as they are no longer used in stock spree.  The spree_legacy_return_authorizations
+    # Otherwise just drop the tables/columns as they are no longer used in stock spree_old.  The spree_legacy_return_authorizations
     # extension will recreate these tables for dev environments & etc as needed.
     if Spree::ReturnAuthorization.exists?
       rename_table :spree_return_authorizations, :spree_legacy_return_authorizations
