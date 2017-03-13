@@ -1,11 +1,13 @@
-server '138.197.95.222', port: 3000, roles: [:web, :app, :db], primary: true
+lock '3.5.0'
+
+server '138.197.95.222', user:'deploy', roles: [:web, :app, :db]
 
 set :repo_url,        'git@github.com:omairrazam/r-baz.git'
 set :application,     'bazar'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
-
+set :branch, :master
 # Don't change these unless you know what you're doing
 set :pty,             true
 set :use_sudo,        false
@@ -21,7 +23,7 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
-
+set :rvm_type, :user
 ## Defaults:
 # set :scm,           :git
 # set :branch,        :master
@@ -35,6 +37,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
+set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
