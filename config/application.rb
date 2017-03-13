@@ -21,7 +21,7 @@ module Bazar
       end
     end
 
-    config.assets.paths << Rails.root.join("vendor", "assets", "images")
+    config.assets.precompile += %w(vendor/*)
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
