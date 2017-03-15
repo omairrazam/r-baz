@@ -6,39 +6,40 @@
   </ul>
 </nav> -->
 
-   <ul class="header-in">
-         <li id="search-bar" data-hook>
-      		<%#= render partial: 'spree/shared/search' %>
-    	</li>
-        <!-- <li>
-            <select class="in-drop">
-                <option value="Dollars" class="in-of">Dollars</option>
-                <option value="Euro" class="in-of">Euro</option>
-                <option value="Yen" class="in-of">Yen</option>
-            </select>
-        </li> -->
-    </ul>
-    <div class="search-box" >
-        <div id="sb-search" class="sb-search">
-        	<%= render partial: 'spree/shared/search' %>
-        </div>
+<ul class="header-in">
+  <li id="search-bar" data-hook>
+    <%#= render partial: 'spree/shared/search' %>
+  </li>
+  <!-- <li>
+      <select class="in-drop">
+          <option value="Dollars" class="in-of">Dollars</option>
+          <option value="Euro" class="in-of">Euro</option>
+          <option value="Yen" class="in-of">Yen</option>
+      </select>
+  </li> -->
+</ul>
+<div class="search-box">
+  <div id="sb-search" class="sb-search">
+    <%= render partial: 'spree/shared/search' %>
+  </div>
 
-    </div>
-    <!-- search-scripts -->
-    <!--<script src="/assets/spree/frontend/classie.js"></script>-->
-    <!--<script src="/assets/spree/frontend/uisearch.js"></script>-->
-   
-    <script>
-    new UISearch(document.getElementById('sb-search'));
-    </script>
-    <!-- //search-scripts -->
-    <div class="online">
-        <li id="link-to-cart" data-hook>
-        <noscript>
-          <%= link_to Spree.t(:cart), '/cart' %>
-        </noscript>
-        &nbsp;
-        </li>
-        <script>Spree.fetch_cart()</script>
-    </div>
-    <div class="clearfix"> </div>
+</div>
+<!-- search-scripts -->
+
+<%= javascript_include_tag 'spree/frontend/classie' %>
+<%= javascript_include_tag 'spree/frontend/uisearch' %>
+
+<script>
+  new UISearch(document.getElementById('sb-search'));
+</script>
+<!-- //search-scripts -->
+<div class="online">
+  <li id="link-to-cart" data-hook>
+    <noscript>
+      <%= link_to Spree.t(:cart), '/cart' %>
+    </noscript>
+    &nbsp;
+  </li>
+  <script>Spree.fetch_cart()</script>
+</div>
+<div class="clearfix"></div>
