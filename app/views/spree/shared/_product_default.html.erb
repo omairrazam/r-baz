@@ -1,12 +1,12 @@
 <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
 
-<div id="product_<%= product.id %>" class="col-md-4 grid-product-in product-top" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
+<div id="product_<%= product.id %>" class="col-md-4 grid-product-in " data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
   <div class=" product-grid">
 
     <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
 
 
-        <%= link_to image_tag(product.display_image.attachment(:home_product), itemprop: "image"), url, itemprop: 'url' %>
+        <%= link_to image_tag(product.display_image.attachment(:home_product), itemprop: "image", class: 'img-responsive'), url, itemprop: 'url'  %>
 
         <div class="shoe-in">
           <h6>

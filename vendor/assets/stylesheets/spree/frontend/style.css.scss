@@ -159,9 +159,10 @@ select.in-drop {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
     filter: alpha(opacity=0); /* IE 5-7 */
     color: transparent;
-	border: none;
+	border: none !important;
 	outline: none;
 	z-index: -1;
+	background-color: transparent !important;
 	-webkit-appearance: none;
 }
 .sb-icon-search {
@@ -175,11 +176,7 @@ select.in-drop {
 .sb-search.sb-search-open,.no-js .sb-search {
 	width:72%;
 }
-.sb-search.sb-search-open .sb-icon-search,.no-js .sb-search .sb-icon-search {
-	background:  image-url('search.png') no-repeat -20px -87px;
-	color: #fff;
-	z-index: 11;
-}
+
 .sb-search.sb-search-open .sb-search-submit,.no-js .sb-search .sb-search-submit {
 	z-index: 90;
 }
