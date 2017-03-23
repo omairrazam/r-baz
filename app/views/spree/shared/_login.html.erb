@@ -1,11 +1,11 @@
 <%= form_for Spree::User.new, as: :spree_user, url: spree.create_new_session_path do |f| %>
   <fieldset id="password-credentials">
     <div >
-      <span>Email</span>
+      <span><%= f.label :email, Spree.t(:email) %></span>
       <%= f.text_field :email, tabindex: 1, placeholder: Spree.t(:email) %>
     </div>
     <div >
-      <span>Password</span>
+      <span><%= f.label :email, Spree.t(:password) %></span>
       <%= f.password_field :password, tabindex: 2, placeholder: Spree.t(:password) %>
     </div>
  
