@@ -73,9 +73,9 @@ a{
 }
 
 
-input[type="submit"]:not[class="sb-search-submit"], input[type="button"], input[type="reset"], button, a.button {
+input[type="submit"].sb-search-submit {
 	background-color: transparent;
-	background-image: inherit;
+	background:#2f2f2f image-url('img-sprite.png') no-repeat -20px -87px;
 	text-shadow: none;
 	color: inherit;
 	font-weight: bold;
@@ -88,11 +88,13 @@ input[type="submit"]:not[class="sb-search-submit"], input[type="button"], input[
 	border-radius: 0px;
 }
 
-input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover, a.button:hover {
-	background-image: none;
-	background-color: #404042;
-	border-color: #404042;
-	color: #FFFFFF;
+input[type="submit"].sb-search-submit:hover{
+	background:#2f2f2f image-url('img-sprite.png') no-repeat -20px -87px;
+
+	-webkit-appearance:none;
+
+	border:none;
+	color: inherit;
 }
 
 .flash.registration_error {

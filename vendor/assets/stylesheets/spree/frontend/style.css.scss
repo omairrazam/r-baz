@@ -155,7 +155,7 @@ select.in-drop {
   cursor: pointer;
 }
 .sb-search-submit {
-  background: url('../images/img-sprite.png') no-repeat -20px -87px;
+  background: image-url('img-sprite.png') no-repeat -20px -87px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
   filter: alpha(opacity=0); /* IE 5-7 */
   color: transparent;
@@ -165,7 +165,7 @@ select.in-drop {
   -webkit-appearance: none;
 }
 .sb-icon-search {
-  background:#2f2f2f url('../images/img-sprite.png') no-repeat -20px -87px;
+  background:#2f2f2f image-url('img-sprite.png') no-repeat -20px -87px;
   z-index: 90;
   width: 30px;
   height: 30px;
@@ -366,7 +366,7 @@ select.in-drop {
 }
 /*----*/
 .banner {
-  background: url(../images/banner.jpg) no-repeat center;
+  background: image-url('spree/frontend/banner.jpg') no-repeat center;
   width: 100%;
   min-height: 600px;
   display: block;
@@ -432,7 +432,7 @@ h6.your-in {
   padding:6em 0 0
 }
 .run i{
-  background: url(../images/img-sprite.png)no-repeat -18px -11px ;
+  background: image-url('img-sprite.png') no-repeat -18px -11px ;
   width: 60px;
   min-height: 60px;
   display: block;
@@ -551,7 +551,7 @@ b.plus-in{
   text-decoration: none;
   height: 76px;
   width: 76px;
-  background: url("../images/img-sprite.png") no-repeat -124px -76px;
+  background: image-url('img-sprite.png') no-repeat -124px -76px;
 }
 .callbacks_nav.next {
   left: 8%;
@@ -937,7 +937,7 @@ a.cart:hover{
 .star ul li i{
   height: 16px;
   width: 16px;
-  background: url("../images/img-sprite.png") no-repeat -386px -114px ;
+  background: image-url('img-sprite.png') no-repeat -386px -114px ;
   display: inline-block;
 }
 .review{
@@ -1788,7 +1788,7 @@ p.footer-class a:hover{
   .callbacks_nav {
     height: 57px;
     width: 57px;
-    background: url("../images/img-sprite.png") no-repeat -92px -57px ;
+    background: image-url('img-sprite.png') no-repeat -92px -57px ;
     background-size: 400px;
   }
   .callbacks_nav.next {
