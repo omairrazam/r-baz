@@ -11,3 +11,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( spree/frontend/classie.js )
 Rails.application.config.assets.precompile += %w( spree/frontend/uisearch.js )
+Rails.application.config.assets.precompile += %w( spree/frontend/zjquery.etalage.min.js )
+Rails.application.config.assets.precompile += %w( spree/frontend/etalage.css )
