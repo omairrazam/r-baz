@@ -75,6 +75,9 @@ GEM
     capistrano-rails (1.1.7)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rails-console (2.2.0)
+      capistrano (>= 3.5.0, < 4.0.0)
+      sshkit-interactive (~> 0.2.0)
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
@@ -325,6 +328,8 @@ GEM
     sshkit (1.11.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    sshkit-interactive (0.2.0)
+      sshkit (~> 1.9)
     state_machines (0.4.0)
     state_machines-activemodel (0.4.0)
       activemodel (>= 4.1, < 5.1)
@@ -372,6 +377,7 @@ DEPENDENCIES
   capistrano
   capistrano-bundler
   capistrano-rails
+  capistrano-rails-console
   capistrano-rvm
   capistrano3-puma
   coffee-rails (~> 4.2)
