@@ -75,7 +75,7 @@ a{
 
 input[type="submit"].sb-search-submit {
 	background-color: transparent;
-	background:#2f2f2f image-url('img-sprite.png') no-repeat -20px -87px;
+	background:#2f2f2f image-url('spree/frontend/img-sprite.png') no-repeat -20px -87px;
 	text-shadow: none;
 	color: inherit;
 	font-weight: bold;
@@ -89,7 +89,7 @@ input[type="submit"].sb-search-submit {
 }
 
 input[type="submit"].sb-search-submit:hover{
-	background:#2f2f2f image-url('img-sprite.png') no-repeat -20px -87px;
+	background:#2f2f2f image-url('spree/frontend/img-sprite.png') no-repeat -20px -87px;
 
 	-webkit-appearance:none;
 
