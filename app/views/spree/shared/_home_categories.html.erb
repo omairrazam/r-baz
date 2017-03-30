@@ -2,8 +2,9 @@
 
  <div class="Asha-your">
     <!-- requried-jsfiles-for owl -->
-    <link href="assets/spree/frontend/owl.carousel.css" rel="stylesheet">
-    <script src="assets/spree/frontend/owl.carousel.js"></script>
+   <%= stylesheet_link_tag 'spree/frontend/owl.carousel.css', media: 'screen' %>
+   <%= javascript_include_tag 'spree/frontend/owl.carousel.js' %>
+
     <script>
     $(document).ready(function() {
         $("#owl-demo").owlCarousel({
