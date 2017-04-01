@@ -28,7 +28,7 @@ Spree::BaseHelper.module_eval do
   			content_tag :div, class: 'item' do
   		 		#css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'list-group-item active' : 'list-group-item'
   		  		l = link_to(seo_url(taxon)) do
-  		  		  image_tag("/assets/spree/frontend/pic#{count}.jpg", :class => "img-responsive")+div_run_tag(taxon.name)
+  		  		  image_tag("spree/frontend/pic#{count}.jpg", :class => "img-responsive")+div_run_tag(taxon.name)
   		  		end
   		  		count+=1
   		  		l + taxons_tree(taxon, current_taxon, max_level - 1) 

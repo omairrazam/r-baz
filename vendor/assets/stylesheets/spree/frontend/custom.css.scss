@@ -1,102 +1,180 @@
-#spree-header{
-	background: #2f2f2f;
-	margin: 0px;
-	#header{
-		padding: 0px;
-		background: inherit;
-	}
-	#logo {
-		img{
-    		width: auto;
-    	}
-	}
+#spree-header {
+  background: #2f2f2f;
+  margin: 0px;
+  #header {
+    padding: 0px;
+    background: inherit;
+  }
+  #logo {
+    img {
+      width: auto;
+    }
+  }
 }
 
-.online{
-	width:15% !important;
-	a {
-		padding:0 !important;
-	}
+.online {
+  width: 15% !important;
+  a {
+    padding: 0 !important;
+  }
 }
 
-.header-in{
-	width:85% !important;
+.header-in {
+  width: 85% !important;
 }
 
-.sb-search{
-	right:16% !important;
+.sb-search {
+  right: 16% !important;
 }
 
-.nav > li > a:hover{
-	background-color: inherit !important;
+.nav > li > a:hover {
+  background-color: inherit !important;
 }
 
-.container-fluid{
-	margin:0;
-	padding:0;
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
 .register-top input[type="submit"] {
-    width: 20% !important;
+  width: 20% !important;
 }
 
 button.cart {
-    border:none;
+  border: none;
 }
 
 .header-grid li#link-to-cart {
- 	padding: 0px;
-	a{
-	    font-size: 1.2em;
+  padding: 0px;
+  a {
+    font-size: 1.2em;
+  }
+}
+
+a {
+  &.list-group-item {
+    background-color: transparent;
+    &.active {
+      background-color: #d2232a;
+      border: none;
+      &:focus {
+        background-color: #d2232a;
+      }
+      &:hover {
+        background-color: #d2232a;
+      }
     }
+  }
 }
 
-a{
-	&.list-group-item {
-	    background-color: transparent;
-	    &.active{
-			    background-color: #d2232a;
-			    border:none;
-		    &:focus{
-		    	background-color: #d2232a;
-		    }
-		    &:hover{
-		    	background-color: #d2232a;
-		    }
-	    }
-	}
+#cart_container {
+  min-height: 400px;
+  padding: 50px;
 }
-
-#cart_container{
-	min-height: 400px;
-	padding: 50px;
-}
-
 
 input[type="submit"].sb-search-submit {
-	background-color: transparent;
-	background:#2f2f2f image-url('spree/frontend/img-sprite.png') no-repeat -20px -87px;
-	text-shadow: none;
-	color: inherit;
-	font-weight: bold;
-	font-size: 12px;
-	font-family: "Ubuntu", sans-serif;
-	border: none;
-	padding: inherit;
-	vertical-align: top;
+  background-color: transparent;
+  background: #2f2f2f image-url('spree/frontend/img-sprite.png') no-repeat -20px -87px;
+  text-shadow: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Ubuntu", sans-serif;
+  border: none;
+  padding: inherit;
+  vertical-align: top;
 
-	border-radius: 0px;
+  border-radius: 0px;
 }
 
-input[type="submit"].sb-search-submit:hover{
-	background:#2f2f2f image-url('spree/frontend/img-sprite.png') no-repeat -20px -87px;
+input[type="submit"].sb-search-submit:hover {
+  background: #2f2f2f image-url('spree/frontend/img-sprite.png') no-repeat -20px -87px;
 
-	-webkit-appearance:none;
+  -webkit-appearance: none;
 
-	border:none;
-	color: inherit;
+  border: none;
+  color: inherit;
 }
 
 .flash.registration_error {
-	background-color: #e45353;
+  background-color: #e45353;
+}
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.bs-callout code {
+  border-radius: 3px;
+}
+
+.bs-callout + .bs-callout {
+  margin-top: -5px;
+}
+
+.bs-callout-default {
+  border-left-color: #777;
+}
+
+.bs-callout-default h4 {
+  color: #777;
+}
+
+.bs-callout-primary {
+  border-left-color: #428bca;
+}
+
+.bs-callout-primary h4 {
+  color: #428bca;
+}
+
+.bs-callout-success {
+  border-left-color: #5cb85c;
+}
+
+.bs-callout-success h4 {
+  color: #5cb85c;
+}
+
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+
+.bs-callout-info {
+  border-left-color: #5bc0de;
+}
+
+.bs-callout-info h4 {
+  color: #5bc0de;
+}
+
+@media (min-width: 768px) {
+  #content{
+    min-height:500px;
+  }
 }
