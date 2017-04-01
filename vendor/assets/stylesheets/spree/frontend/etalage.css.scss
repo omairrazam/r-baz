@@ -17,7 +17,7 @@
 
 /* Large thumbnail: */
 #product-thumbnails .etalage_thumb{
-	background: white url(../images/loading.gif) center no-repeat;
+	background: white image-url('spree/frontend/loading.gif') center no-repeat;
 	border: 1px solid #EDEDED;
 }
 
@@ -42,7 +42,7 @@
 /* Zoomed image area: */
 #product-thumbnails .etalage_zoom_area,
 .etalage_zoom_area{
-	background: white image-url("/assets/spree/frontend/loading.gif") center no-repeat;
+	background: white image-url("spree/frontend/loading.gif") center no-repeat;
 	
 }
 
@@ -54,7 +54,7 @@
 
 /* Icon that will apear at the left bottom of the large thumbnail (optional): */
 #product-thumbnails .etalage_icon{
-	background: image-url("/assets/spree/frontend/zoom.png") no-repeat;
+	background: image-url("spree/frontend/zoom.png") no-repeat;
 	width: 104px;
 	height: 104px;
 	border: 1px solid #EDEDED;
@@ -62,7 +62,7 @@
 
 /* Hint that will apear at the top right of the large thumbnail (optional): */
 #product-thumbnails .etalage_hint{
-	background: image-url("/assets/spree/frontend/hint.gif") no-repeat;
+	background: image-url("spree/frontend/hint.gif") no-repeat;
 	width: 130px;
 	height: 57px;
 }
