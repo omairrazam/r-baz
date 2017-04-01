@@ -11,11 +11,19 @@ Spree.config do |config|
   # Core:
 
   # Default currency for new sites
-  config.currency = "PK"
+  #config.currency = "PK"
 
   # from address for transactional emails
   config.mails_from = "store@example.com"
-  config.default_country_iso = 'PK'
+
+
+  # Check if table already exists
+  if ActiveRecord::Base.connection.tables.include?('spree_countries')
+      config.currency = 'PK'
+      country = Spree::Country.find_by_name('India')
+      config.default_country_id = country.id if country.present?
+      config.default_country_iso = 'PK'
+  end
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
 
