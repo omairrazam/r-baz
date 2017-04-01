@@ -176,7 +176,7 @@ select.in-drop {
   width:72%;
 }
 .sb-search.sb-search-open .sb-icon-search,.no-js .sb-search .sb-icon-search {
-  background:  url('../images/search.png') no-repeat -20px -87px;
+  background:  image-url('spree/frontend/search.png') no-repeat -20px -87px;
   color: #fff;
   z-index: 11;
 }
@@ -1006,7 +1006,7 @@ a.cart:hover{
 }
 .single-bottom ul li input[type="checkbox"]:checked+label span:first-child:before {
   content: "";
-  background:url(../images/11.png)no-repeat;
+  background:image-url('spree/frontend/11.png')no-repeat;
   position: absolute;
   left: 2px;
   top: 2px;
