@@ -19,8 +19,8 @@ Spree.config do |config|
 
   # Check if table already exists
   if ActiveRecord::Base.connection.tables.include?('spree_countries')
-      config.currency = 'PK'
-      country = Spree::Country.find_by_name('India')
+      config.currency = 'RS'
+      country = Spree::Country.find_by_name('Pakistan')
       config.default_country_id = country.id if country.present?
       config.default_country_iso = 'PK'
   end
