@@ -1,0 +1,32 @@
+
+<h1><%#= Spree.t(:registration) %></h1>
+<div id="registration" data-hook>
+
+
+  <% if Spree::Config[:allow_guest_checkout] %>
+      <% content_for :allow_guest_checkout do %>
+          <div id="guest_checkout" data-hook class="">
+            <h6><%= Spree.t(:guest_user_account) %></h6>
+
+            <%= form_for @order, url: update_checkout_registration_path, method: :put, html: {id: 'checkout_form_registration'} do |f| %>
+                <fieldset id="password-credentials">
+                  <div>
+                    <span><%= f.label :email, Spree.t(:email) %></span>
+                    <%= f.text_field :email, placeholder: Spree.t(:email) %>
+                  </div>
+                  <%= f.submit Spree.t(:continue), class: 'button primary' %>
+                </fieldset>
+            <% end %>
+          </div>
+      <% end %>
+  <% end %>
+
+  <div id="account" class="columns alpha eight">
+    <%= render template: 'sprees/user_sessions/new' %>
+  </div>
+
+
+</div>
+
+
+

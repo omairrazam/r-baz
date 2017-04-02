@@ -1,0 +1,50 @@
+<% @body_id = 'login' %>
+
+<!---->
+<div class="container">
+  <div class="account">
+    <h2>Account</h2>
+    <div class="row">
+      <div id="existing-customer" class="account-pass" data-hook="login">
+        <div class="col-md-7 account-top">
+          <% if flash[:alert] %>
+              <div class="alert alert-danger"><%= flash[:alert] %></div>
+          <% end %>
+          <%= render :partial => 'sprees/shared/login' %>
+        </div>
+
+        <div class="col-md-5 left-account ">
+          <div class="text-center">
+            <%= link_to Spree.t(:create_a_new_account), spree.signup_path, :class => "create" %> <%= Spree.t(:or) %>
+            <%= link_to Spree.t(:forgot_password), spree.recover_password_path, :class => "create" %>
+
+          </div>
+
+
+          <div data-hook="login_extras"></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-7 account-top">
+        <%= content_for :allow_guest_checkout %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!---->
