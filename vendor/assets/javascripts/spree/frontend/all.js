@@ -11,3 +11,5 @@
 // require_tree .
 
 // require spree_variant_options
+
+//= require spree/frontend/solidus_product_discount
