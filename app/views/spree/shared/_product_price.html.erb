@@ -1,0 +1,12 @@
+<% if product.sale_price.present? %>
+    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <strike class="price selling" itemprop="price"><%= display_price(product) %></strike>
+    </span>
+    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <span class="price discount" itemprop="price"><%= display_discounted_price(product) %></span>
+    </span>
+<% else %>
+    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <span class="price selling" itemprop="price"><%= display_price(product) %></span>
+    </span>
+<% end %>

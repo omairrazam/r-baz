@@ -9,3 +9,5 @@
 //= require spree/backend
 
 //= require_tree .
+
+//= require spree/backend/solidus_product_discount

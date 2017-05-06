@@ -1,0 +1,6 @@
+<% if line_item.sale_price.present? and line_item.sale_price > 0 %>
+    <strike><%= line_item.single_money.to_html %></strike><br>
+    <%= line_item.single_money_sale.to_html %>
+<% else %>
+    <%= line_item.single_money.to_html %>
+<% end %>
